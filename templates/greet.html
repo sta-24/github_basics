@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{ name }}</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(
+                135deg,
+                #667eea 0%,
+                #764ba2 50%,
+                #6B73FF 100%
+            );
+            overflow:hidden;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.15);
+            backdrop-filter:blur(15px);
+            border:1px solid rgba(255,255,255,0.2);
+            padding:60px;
+            border-radius:25px;
+            text-align:center;
+            color:white;
+            box-shadow:0 20px 40px rgba(0,0,0,0.2);
+            animation:float 4s ease-in-out infinite;
+        }
+
+        h1{
+            font-size:3rem;
+            margin-bottom:15px;
+        }
+
+        .name{
+            color:#ffd369;
+        }
+
+        p{
+            font-size:1.1rem;
+            opacity:0.9;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:white;
+            color:#764ba2;
+            padding:12px 28px;
+            border-radius:50px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        @keyframes float{
+            0%,100%{
+                transform:translateY(0);
+            }
+            50%{
+                transform:translateY(-10px);
+            }
+        }
+
+        .circle{
+            position:absolute;
+            border-radius:50%;
+            background:rgba(255,255,255,0.1);
+        }
+
+        .circle1{
+            width:250px;
+            height:250px;
+            top:-80px;
+            left:-80px;
+        }
+
+        .circle2{
+            width:300px;
+            height:300px;
+            bottom:-100px;
+            right:-100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <div class="card">
+        <h1>Hello, <span class="name">{{ name }}</span> 👋</h1>
+
+        <p>
+            Welcome to your Flask application.
+            Your dynamic page is working perfectly!
+        </p>
+
+        <a href="/" class="btn">Go Home</a>
+    </div>
+
+</body>
+</html>
+```
