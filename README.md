@@ -1,3 +1,3 @@
 # github_basics 
 
-by Gokul
+by Stavina
